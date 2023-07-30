@@ -55,6 +55,7 @@ class GiphySearchTab extends Component {
       searchTerm: "",
       gifs: [],
       loading: false,
+      GIFById: {},
     };
     this.handleSearchChange = this.handleSearchChange.bind(this);
     this.searchGifs = this.searchGifs.bind(this);
@@ -70,6 +71,29 @@ class GiphySearchTab extends Component {
     const response = await fetch(url);
     const data = await response.json();
     this.setState({ gifs: data.data, loading: false });
+    data.data.forEach((jsonElement) => {
+        const id = jsonElement.id;
+        const updatedItem = {
+            "body": jsonElement.title,
+            "info": {
+                "h": jsonElement.images.original.height,
+                "w": jsonElement.images.original.width,
+                "size": jsonElement.images.original.size,
+                "mimetype": "image/gif",
+                "thumbnail_info": {
+                    "h": jsonElement.images.fixed_width_still.height,
+                    "mimetype": "image/jpg",
+                    "size": jsonElement.images.fixed_width_still.size,
+                    "w": jsonElement.images.fixed_width_still.width
+                },
+                "thumbnail_url": jsonElement.images.fixed_width_still.url
+            },
+           "msgtype": "m.image",
+           "url": jsonElement.images.original.url
+        };
+        this.setState((prevState) => ({ 
+            GIFById: {...prevState.GIFById, [id]: updatedItem}}));
+    });
   } catch (error) {
     this.setState({ error: "Error fetching GIFs", loading: false });
     this.setState({ loading: false });
@@ -81,7 +105,8 @@ class GiphySearchTab extends Component {
   }
 
   handleGifClick(gif) {
-    this.props.send(gif);
+    console.log(this.state.GIFById[gif.id]);
+    widgetAPI.sendGIF(this.state.GIFById[gif.id]);
   }
   async searchGiphy(searchTerm) {
   if (!searchTerm) return;
@@ -106,8 +131,8 @@ class GiphySearchTab extends Component {
           <section class="stickerpack">
               <div class="sticker-list">
           ${gifs.map((gif) => html`
-            <div class="sticker" onClick=${() => this.handleGifClick(gif)}>
-              <img src=${gif.images.fixed_height.url} alt=${gif.title} class="visible"/>
+            <div class="sticker" onClick=${() => this.handleGifClick(gif)} data-gif-id=${gif.id}>
+              <img src=${gif.images.fixed_height.url} alt=${gif.title} class="visible" data=/>
             </div>
           `)}
           </div>
@@ -356,14 +381,19 @@ class App extends Component {
     }
 
     return html`<main class="has-content ${theme}">
-      <nav onWheel=${this.navScroll} ref=${(elem) => (this.navRef = elem)}>
-        <a href="#stickers" onClick=${() => this.setState({ activeTab: "stickers" })}>Stickers</a>
-        <a href="#gifs" onClick=${() => this.setState({ activeTab: "gifs" })}>GIFs</a>
-      </nav>
-      ${this.state.activeTab === "stickers" && html`
-        <div class="search-box">
-          <${SearchBox} onKeyUp=${this.searchStickers} />
+        <div class="tab-container">
+        <a href="#stickers" class="tab" onClick=${() => this.setState({ activeTab: "stickers" })}>Stickers</a>
+        <a href="#gifs" class="tab" onClick=${() => this.setState({ activeTab: "gifs" })}>GIFs</a>
         </div>
+
+      ${this.state.activeTab === "stickers" && html`
+        <nav onWheel=${this.navScroll} ref=${elem => this.navRef = elem}>
+            <${NavBarItem} pack=${this.state.frequentlyUsed} iconOverride="recent" />
+			${this.state.packs.map(pack => html`<${NavBarItem} id=${pack.id} pack=${pack}/>`)}
+			<${NavBarItem} pack=${{ id: "settings", title: "Settings" }} iconOverride="settings" />
+        </nav>
+
+        <${SearchBox} onKeyUp=${this.searchStickers} />
         <div class="pack-list ${isMobileSafari ? "ios-safari-hack" : ""}" ref=${(elem) => (this.packListRef = elem)}>
         ${filterActive && packs.length === 0
           ? html`<div class="search-empty"><h1>No stickers match your search</h1></div>`
@@ -374,7 +404,7 @@ class App extends Component {
 
       `}
       ${this.state.activeTab === "gifs" && html`
-        <${GiphySearchTab} send=${this.sendSticker} />
+        <${GiphySearchTab} send=${this.sendGIF} />
       `}
     </main>`;
   }

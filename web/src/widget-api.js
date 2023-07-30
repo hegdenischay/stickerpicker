@@ -74,3 +74,21 @@ export function sendSticker(content) {
 		widgetData,
 	}, "*")
 }
+
+export function sendGIF(content) {
+    const data = {
+        content: { ...content },
+        name: content.body,
+    }
+
+    delete data.content.id
+
+    window.parent.postMessage({
+        api: "fromWidget",
+        action: "m.image",
+        requestId: `gif-${Date.now()}`,
+        widgetId,
+        data,
+        widgetData,
+    }, "*")
+}
