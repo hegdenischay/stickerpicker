@@ -1,11 +1,15 @@
 {
   "packs": [
-    "bocchi_dlc2_y0ursfunny_akaudon.json",
-    "bocchi_dlc_y0ursfunny_akaudon.json",
+    "DEVINsOpPaCk.json",
+    "TrollFaceStiVIGI.json",
+    "ult_1830433410_3.json",
+    "pepe_frog.json",
+    "Shinchanbygojo_by_fStikBot.json",
+    "Kaguya_sama_WWA_TV2.json",
     "Hyper_cats.json",
     "K10f1b91219abafa4cc4a_by_StickerStealRobot.json",
-    "DuredReninGrabs_by_fStikBot.json",
-    "JPS_JerseyKun7.json"
+    "mylittleanimestickerpack.json"
   ],
-  "homeserver_url": "https://matrix.intothematrix.in"
+  "homeserver_url": "https://matrix.intothematrix.in",
+  "giphy_api_key": "Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g"
 }
