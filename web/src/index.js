@@ -19,7 +19,6 @@ import {SearchBox} from "./search-box.js"
 import {giphyIsEnabled, GiphySearchTab, setGiphyAPIKey} from "./giphy.js"
 import * as widgetAPI from "./widget-api.js"
 import * as frequent from "./frequently-used.js"
-// import GiphyAPI from "./GiphySearch.js"
 
 // The base URL for fetching packs. The app will first fetch ${PACK_BASE_URL}/index.json,
 // then ${PACK_BASE_URL}/${packFile} for each packFile in the packs object of the index.json file.
@@ -32,7 +31,6 @@ if (params.has('config')) {
 }
 // This is updated from packs/index.json
 let HOMESERVER_URL = "https://matrix-client.matrix.org"
-let GIPHY_API_KEY = ""
 
 const makeThumbnailURL = mxc => `${HOMESERVER_URL}/_matrix/media/v3/thumbnail/${mxc.slice(6)}?height=128&width=128&method=scale`
 
@@ -42,7 +40,6 @@ const isMobileSafari = navigator.userAgent.match(/(iPod|iPhone|iPad)/) && naviga
 
 const supportedThemes = ["light", "dark", "black"]
 
-
 const defaultState = {
 	packs: [],
 	filtering: {
@@ -50,102 +47,6 @@ const defaultState = {
 		packs: [],
 	},
 }
-
-class GiphySearchTab extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchTerm: "",
-      gifs: [],
-      loading: false,
-      GIFById: {},
-    };
-    this.handleSearchChange = this.handleSearchChange.bind(this);
-    this.searchGifs = this.searchGifs.bind(this);
-    this.handleGifClick = this.handleGifClick.bind(this);
-  }
-
-  async searchGifs() {
-    this.setState({ loading: true });
-    try {
-    // const apiKey = "Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g";
-    const apiKey = GIPHY_API_KEY;
-    const url = `https://api.giphy.com/v1/gifs/search?q=${this.state.searchTerm}&api_key=${apiKey}`;
-    this.setState({ loading: true });
-    const response = await fetch(url);
-    const data = await response.json();
-    this.setState({ gifs: data.data, loading: false });
-    data.data.forEach((jsonElement) => {
-        const id = jsonElement.id;
-        const updatedItem = {
-            "body": jsonElement.title,
-            "info": {
-                "h": jsonElement.images.original.height,
-                "w": jsonElement.images.original.width,
-                "size": jsonElement.images.original.size,
-                "mimetype": "image/gif",
-                "thumbnail_info": {
-                    "h": jsonElement.images.fixed_width_still.height,
-                    "mimetype": "image/jpg",
-                    "size": jsonElement.images.fixed_width_still.size,
-                    "w": jsonElement.images.fixed_width_still.width
-                },
-                "thumbnail_url": jsonElement.images.fixed_width_still.url
-            },
-           "msgtype": "m.image",
-           "url": jsonElement.images.original.url
-        };
-        this.setState((prevState) => ({ 
-            GIFById: {...prevState.GIFById, [id]: updatedItem}}));
-    });
-  } catch (error) {
-    this.setState({ error: "Error fetching GIFs", loading: false });
-    this.setState({ loading: false });
-    }
-  }
-
-  handleSearchChange(event) {
-    this.setState({ searchTerm: event.target.value });
-  }
-
-  handleGifClick(gif) {
-    console.log(this.state.GIFById[gif.id]);
-    widgetAPI.sendGIF(this.state.GIFById[gif.id]);
-  }
-  async searchGiphy(searchTerm) {
-  if (!searchTerm) return;
-
-};
-
-  render() {
-    const { searchTerm, gifs, loading } = this.state;
-
-    return html`
-        <div class="search-box">
-          <input
-            type="text"
-            value=${searchTerm}
-            onInput=${this.handleSearchChange}
-            placeholder="Search GIFs..."
-          />
-          <button onClick=${this.searchGifs} disabled=${loading}>Search</button>
-        </div>
-          <!-- <div class="gifs-list" style="display: grid"> -->
-        <div class="pack-list">
-          <section class="stickerpack">
-              <div class="sticker-list">
-          ${GIPHY_API_KEY !== "" && gifs.map((gif) => html`
-            <div class="sticker" onClick=${() => this.handleGifClick(gif)} data-gif-id=${gif.id}>
-              <img src=${gif.images.fixed_height.url} alt=${gif.title} class="visible" data=/>
-            </div>
-          `)}
-          </div>
-        </div>
-      </div>
-    `;
-  }
-}
-
 
 class App extends Component {
 	constructor(props) {
@@ -498,3 +399,4 @@ const Sticker = ({content, send}) => html`
 `
 
 render(html`<${App}/>`, document.body)
+
