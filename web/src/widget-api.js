@@ -76,6 +76,7 @@ export function sendSticker(content){
  *}
  */
 
+<<<<<<< HEAD
 export async function sendGIF(content){
     // just print content, since it's a custom type with URL
     console.log("Content:"+content.url);
@@ -96,6 +97,17 @@ export async function sendGIF(content){
     delete content.info.thumbnail_url;
     // finally, send it as sticker
     sendSticker(content);
+=======
+	// This is for Element iOS
+	const widgetData = {
+		...data,
+		description: content.body,
+		file: content.filename ?? `${content.id}.png`,
+	}
+	delete widgetData.content.filename
+	// Element iOS explodes if there are extra fields present
+	delete widgetData.content["net.maunium.telegram.sticker"]
+>>>>>>> upstream/master
 
 }
 
