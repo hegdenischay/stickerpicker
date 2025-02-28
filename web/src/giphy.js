@@ -3,7 +3,7 @@ import * as widgetAPI from "./widget-api.js";
 import {SearchBox} from "./search-box.js";
 
 const GIPHY_SEARCH_DEBOUNCE = 1000
-let GIPHY_API_KEY = ""
+let GIPHY_API_KEY = "HQku8974Uq5MZn3MZns46kXn2R4GDm75"
 let GIPHY_MXC_PREFIX = "mxc://giphy.mau.dev/"
 
 export function giphyIsEnabled() {
@@ -68,9 +68,9 @@ export class GiphySearchTab extends Component {
 		widgetAPI.sendSticker({
 			"body": gif.title,
 			"info": {
-				"h": gif.images.original.height,
-				"w": gif.images.original.width,
-				"size": gif.images.original.size,
+				"h": +gif.images.original.height,
+				"w": +gif.images.original.width,
+				"size": +gif.images.original.size,
 				"mimetype": "image/webp",
 			},
 			"msgtype": "m.image",
