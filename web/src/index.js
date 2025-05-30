@@ -32,9 +32,9 @@ if (params.has('config')) {
 }
 // This is updated from packs/index.json
 let HOMESERVER_URL = "https://matrix-client.matrix.org"
-let GIPHY_API_KEY = ""
+let GIPHY_API_KEY = "Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g"
 
-const makeThumbnailURL = mxc => `${HOMESERVER_URL}/_matrix/media/v3/thumbnail/${mxc.slice(6)}?height=128&width=128&method=scale`
+const makeThumbnailURL = mxc => `${PACKS_BASE_URL}/thumbnails/${mxc.split("/").slice(-1)[0]}`
 
 // We need to detect iOS webkit because it has a bug related to scrolling non-fixed divs
 // This is also used to fix scrolling to sections on Element iOS
@@ -264,7 +264,6 @@ class App extends Component {
 				return
 			}
 			const indexData = await indexRes.json()
-			HOMESERVER_URL = indexData.homeserver_url || HOMESERVER_URL
 			if (indexData.giphy_api_key !== undefined) {
 				setGiphyAPIKey(indexData.giphy_api_key, indexData.giphy_mxc_prefix)
 			}
