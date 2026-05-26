@@ -83,9 +83,9 @@ async def reupload_pack(client: TelegramClient, pack: StickerSetFull, output_dir
             print(f"Skipped reuploading {document.id}")
         except KeyError:
             reuploaded_documents[document.id], data = await reupload_document(client, document)
+            stickers_data[reuploaded_documents[document.id]["url"]] = data
         # Always ensure the body and telegram metadata is correct
         add_meta(document, reuploaded_documents[document.id], pack)
-        stickers_data[reuploaded_documents[document.id]["url"]] = data
 
     for sticker in pack.packs:
         if not sticker.emoticon:
