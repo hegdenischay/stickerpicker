@@ -1,0 +1,396 @@
+{
+  "images": {
+    "🤔": {
+      "body": "🤔",
+      "url": "mxc://intothematrix.in/MeuWilASIRgQBmhUYOLWKyYm",
+      "info": {
+        "w": 164,
+        "h": 256,
+        "size": 1097780,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/MeuWilASIRgQBmhUYOLWKyYm",
+        "thumbnail_info": {
+          "w": 164,
+          "h": 256,
+          "size": 1097780,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5321211922782114502",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5321211922782114502",
+        "emoticons": [
+          "🤔"
+        ]
+      }
+    },
+    "😨": {
+      "body": "😨",
+      "url": "mxc://intothematrix.in/vcBmSCmjarbiegyxSbhvdqxK",
+      "info": {
+        "w": 256,
+        "h": 200,
+        "size": 193226,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/vcBmSCmjarbiegyxSbhvdqxK",
+        "thumbnail_info": {
+          "w": 256,
+          "h": 200,
+          "size": 193226,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5285184787915492602",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5285184787915492602",
+        "emoticons": [
+          "😨"
+        ]
+      }
+    },
+    "💻": {
+      "body": "💻",
+      "url": "mxc://intothematrix.in/wGqbqGWnjVDBhseJmnEPHNnz",
+      "info": {
+        "w": 256,
+        "h": 158,
+        "size": 493382,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/wGqbqGWnjVDBhseJmnEPHNnz",
+        "thumbnail_info": {
+          "w": 256,
+          "h": 158,
+          "size": 493382,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5296431112535431394",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5296431112535431394",
+        "emoticons": [
+          "💻",
+          "🟦"
+        ]
+      }
+    },
+    "🕔": {
+      "body": "🕔",
+      "url": "mxc://intothematrix.in/GEJGZphdVFLfrMBhFDnlttna",
+      "info": {
+        "w": 256,
+        "h": 190,
+        "size": 422975,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/GEJGZphdVFLfrMBhFDnlttna",
+        "thumbnail_info": {
+          "w": 256,
+          "h": 190,
+          "size": 422975,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5300983782164155802",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5300983782164155802",
+        "emoticons": [
+          "🕔"
+        ]
+      }
+    },
+    "🤪": {
+      "body": "🤪",
+      "url": "mxc://intothematrix.in/eqxZtSsWTTVTqovXleSiHOxx",
+      "info": {
+        "w": 235,
+        "h": 256,
+        "size": 809337,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/eqxZtSsWTTVTqovXleSiHOxx",
+        "thumbnail_info": {
+          "w": 235,
+          "h": 256,
+          "size": 809337,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5303174713701320982",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5303174713701320982",
+        "emoticons": [
+          "🤪"
+        ]
+      }
+    },
+    "🌟": {
+      "body": "🌟",
+      "url": "mxc://intothematrix.in/BvpJntIbXSANlOAXCUEwJoSG",
+      "info": {
+        "w": 256,
+        "h": 256,
+        "size": 1008580,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/BvpJntIbXSANlOAXCUEwJoSG",
+        "thumbnail_info": {
+          "w": 256,
+          "h": 256,
+          "size": 1008580,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5302993886988226982",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5302993886988226982",
+        "emoticons": [
+          "🌟"
+        ]
+      }
+    },
+    "🤨": {
+      "body": "🤨",
+      "url": "mxc://intothematrix.in/cxRnWsKClMZdEVDMmyQLEACk",
+      "info": {
+        "w": 184,
+        "h": 256,
+        "size": 315969,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/cxRnWsKClMZdEVDMmyQLEACk",
+        "thumbnail_info": {
+          "w": 184,
+          "h": 256,
+          "size": 315969,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5314587421059338600",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5314587421059338600",
+        "emoticons": [
+          "🤨",
+          "🫵",
+          "❓",
+          "❔",
+          "⁉"
+        ]
+      }
+    },
+    "😼": {
+      "body": "😼",
+      "url": "mxc://intothematrix.in/JWVzuSmHdqsrMuQVhxARVxCU",
+      "info": {
+        "w": 211,
+        "h": 256,
+        "size": 626961,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/JWVzuSmHdqsrMuQVhxARVxCU",
+        "thumbnail_info": {
+          "w": 211,
+          "h": 256,
+          "size": 626961,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5314494125779735081",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5314494125779735081",
+        "emoticons": [
+          "😼"
+        ]
+      }
+    },
+    "☕": {
+      "body": "☕",
+      "url": "mxc://intothematrix.in/MuODrukgBaPJQmNSDIGPiOJg",
+      "info": {
+        "w": 256,
+        "h": 199,
+        "size": 234478,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/MuODrukgBaPJQmNSDIGPiOJg",
+        "thumbnail_info": {
+          "w": 256,
+          "h": 199,
+          "size": 234478,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5312328354160988833",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5312328354160988833",
+        "emoticons": [
+          "☕"
+        ]
+      }
+    },
+    "🦜": {
+      "body": "🦜",
+      "url": "mxc://intothematrix.in/eWFzrXpTEzkMrVxEwCNcdTmX",
+      "info": {
+        "w": 256,
+        "h": 256,
+        "size": 1122655,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/eWFzrXpTEzkMrVxEwCNcdTmX",
+        "thumbnail_info": {
+          "w": 256,
+          "h": 256,
+          "size": 1122655,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5314768788938317850",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5314768788938317850",
+        "emoticons": [
+          "🦜"
+        ]
+      }
+    },
+    "👎": {
+      "body": "👎",
+      "url": "mxc://intothematrix.in/GOmKxFdqUFIBnnZPiMhJkLsg",
+      "info": {
+        "w": 253,
+        "h": 256,
+        "size": 100899,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/GOmKxFdqUFIBnnZPiMhJkLsg",
+        "thumbnail_info": {
+          "w": 253,
+          "h": 256,
+          "size": 100899,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5323527674658835863",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5323527674658835863",
+        "emoticons": [
+          "👎"
+        ]
+      }
+    },
+    "🛠": {
+      "body": "🛠",
+      "url": "mxc://intothematrix.in/ORdAWszkBxEIxpAvuBtsQGJT",
+      "info": {
+        "w": 256,
+        "h": 241,
+        "size": 407779,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/ORdAWszkBxEIxpAvuBtsQGJT",
+        "thumbnail_info": {
+          "w": 256,
+          "h": 241,
+          "size": 407779,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5323714810678892284",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5323714810678892284",
+        "emoticons": [
+          "🛠"
+        ]
+      }
+    },
+    "😔": {
+      "body": "😔",
+      "url": "mxc://intothematrix.in/QPgEUJtpvCYtvbaFspBVrIwD",
+      "info": {
+        "w": 256,
+        "h": 256,
+        "size": 1301092,
+        "mimetype": "image/gif",
+        "thumbnail_url": "mxc://intothematrix.in/QPgEUJtpvCYtvbaFspBVrIwD",
+        "thumbnail_info": {
+          "w": 256,
+          "h": 256,
+          "size": 1301092,
+          "mimetype": "image/gif"
+        }
+      },
+      "msgtype": "m.sticker",
+      "id": "tg-5321495721336133284",
+      "net.maunium.telegram.sticker": {
+        "pack": {
+          "id": "3453807855272984586",
+          "short_name": "vid1_804152306_by_AstrakoBot"
+        },
+        "id": "5321495721336133284",
+        "emoticons": [
+          "😔",
+          "😢",
+          "😞",
+          "⚡",
+          "😿"
+        ]
+      }
+    }
+  },
+  "pack": {
+    "display_name": "@ungeskriptet's Video Pack (2/5)",
+    "usage": [
+      "sticker"
+    ]
+  }
+}

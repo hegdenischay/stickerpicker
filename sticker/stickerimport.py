@@ -33,11 +33,12 @@ async def reupload_document(client: TelegramClient, document: Document) -> Tuple
     print(f"Reuploading {document.id}", end="", flush=True)
     data = await client.download_media(document, file=bytes)
     print(".", end="", flush=True)
-    data, width, height = util.convert_image(data)
+    data, width, height, mimetype = util.convert_image(data)
     print(".", end="", flush=True)
-    mxc = await matrix.upload(data, "image/png", f"{document.id}.png")
+    extension = mimetype.split("/")[-1]
+    mxc = await matrix.upload(data, mimetype, f"{document.id}.{extension}")
     print(".", flush=True)
-    return util.make_sticker(mxc, width, height, len(data)), data
+    return util.make_sticker(mxc, width, height, len(data), mimetype=mimetype), data
 
 
 def add_meta(document: Document, info: matrix.StickerInfo, pack: StickerSetFull) -> None:
